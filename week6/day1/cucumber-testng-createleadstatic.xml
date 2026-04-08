@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Lead Management Suite">
+    <test name="Create Lead Functional Tests">
+        <classes>
+            <class name="runner.CreateLeadRunnerStatic"/>
+        </classes>
+    </test>
+</suite>
