@@ -1,0 +1,61 @@
+<!-- <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="DemoSuite">
+    <test name="DemoTest">
+        <classes>
+            <class name="com.testng.sample.TestClass"/>
+        </classes>
+    </test>
+</suite> -->
+
+<!-- <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Suite1" verbose="1" parallel="none">
+
+    <test name="E2E">
+        <classes>
+            <class name="com.testng.sample.CreateLead"/>
+            <class name="com.testng.sample.DeleteLead"/>
+            <class name="com.testng.sample.DuplicateLead"/>
+            <class name="com.testng.sample.EditLead"/>
+            <class name="com.testng.sample.MergeLead"/>
+        </classes>
+    </test>
+
+</suite> -->
+
+<!-- <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Suite1" verbose="1" parallel="classes">
+
+    <test name="E2E">
+        <classes>
+            <class name="com.testng.sample.CreateLead"/>
+            <class name="com.testng.sample.DeleteLead"/>
+            <class name="com.testng.sample.DuplicateLead"/>
+        </classes>
+    </test>
+
+</suite> -->
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Lead Management Suite" verbose="1" thread-count="2"  parallel="tests">
+
+    <test name="Lead Creation Flow" parallel="classes">
+        <classes>
+            <class name="com.testng.sample.CreateLead"/>
+            <class name="com.testng.sample.DuplicateLead"/>
+             <class name="com.testng.sample.EditLead"/>
+        </classes>
+    </test>
+
+    <test name="Lead Deletion Flow" parallel="classes" >
+        <classes>
+            <class name="com.testng.sample.DeleteLead"/>
+        </classes>
+    </test>
+
+</suite>
+
+
+
