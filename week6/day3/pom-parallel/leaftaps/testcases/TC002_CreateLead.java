@@ -10,7 +10,7 @@ public class TC002_CreateLead  extends ProjectSpecifcMethods{
     @Test
     public void runCreateLead(){
         //singleton design pattern
-        LoginPage user = new LoginPage(driver);
+        LoginPage user = new LoginPage(driver); //parameterized constructor
         user.enterUserName()
             .enterPassword()
             .clickLoginButton()
